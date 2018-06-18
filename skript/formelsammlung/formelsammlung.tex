@@ -1,0 +1,144 @@
+\documentclass[a4paper, 12pt, titlepage=true]{scrreprt}
+\usepackage{graphicx,wrapfig}
+\usepackage{subcaption}
+\usepackage[ngerman]{varioref}
+\usepackage[utf8]{inputenc}
+\usepackage{harvard}
+\usepackage[ngerman]{babel}
+\usepackage[babel,german=swiss]{csquotes}
+\usepackage[usenames,dvipsnames]{color}
+%\usepackage{fancyhdr}
+%\usepackage{rotating}
+%\usepackage{multicol}
+%\usepackage{floatflt}
+\usepackage{enumerate}
+%\usepackage{longtable}
+%\usepackage{tikz}
+%\usepackage{amsmath}
+\usepackage[left=25mm,right=25mm,top=25mm,bottom=35mm]{geometry}
+%\usepackage{enumerate}
+%\usepackage{wrapfig}
+%\usepackage{caption}
+%\usepackage{gensymb}
+
+\usepackage{sidecap}
+\usepackage{amssymb,amsmath}
+\DeclareGraphicsExtensions{.png, .jpg, .jpeg, .eps}
+\graphicspath{{./images/}}
+\setlength{\fboxrule}{4pt}
+\setlength{\fboxsep}{20pt}
+
+\definecolor{blau}{cmyk}{1,0,0.,0}
+\newcounter{loesung}[chapter]
+\newcounter{aufgabe}[chapter]
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+
+\newcommand{\aufgabe}{\refstepcounter{aufgabe}
+\textbf{\vspace{5pt} \\ Aufgabe \thechapter.\theaufgabe: }}
+
+\newcommand{\loesung}{\refstepcounter{loesung}
+\textbf{\vspace{5pt} \\ Loesung \thechapter.\theloesung: }}
+
+\begin{document}
+
+\title{Physik für Baustatiker \\ Loesungen \\ HSLU, HS 2017}
+\author{von \\ \bf{Marco Gähler}}
+%\maketitle
+
+\textbf{Formelsammlung Baumechanik} (noch nicht komplett und das Design ist noch verbesserungswürdig...)
+\\
+\textbf{Einheitenvorsätze}
+\begin{table}[h]
+\centering
+\begin{tabular}{ c c c }
+ Einheitenvorsatz & Abkürzung & Wert \\
+ Tera & T & $10^{12}$ \\
+ Giga & G & $10^9$\\
+ Mega & M & $10^6$\\
+ Kilo & k & $10^3$\\
+ Hekto & h & $100$\\
+ Dezi & d & $0.1$\\
+ Zenti & c & $0.01$\\
+ Milli  & m & $10^{-3}$\\
+ Mirko & $\mu$ & $10^{-6}$\\
+ Nano & n & $10^{-9}$\\
+\end{tabular}
+%\caption{\textsf{Eine Liste mit den wichtigsten Einheitenvorsätzen.}}
+\end{table}
+
+\textbf{Kinematik}
+\begin{equation}
+s(t) = s_0 + v_0\cdot t + \frac{1}{2}a\cdot t^2.
+\end{equation}
+\begin{equation}
+v(t) = a\cdot \Delta t + v_0
+\end{equation}
+\begin{equation}
+a(t) = a = konst
+\end{equation}
+\begin{equation}
+g \approx 10m/s^2
+\end{equation}
+
+\textbf{Kräfte}
+\begin{equation}
+\vec{F} = m\cdot \vec{a}
+\end{equation}
+\begin{equation}
+\vec{F}_{ab} = -\vec{F}_{ba}
+\end{equation}
+
+Reibungskraft $F_R = F_s \cdot \mu$ 
+
+Tabelle mit Reibungskoeffizienten:
+
+\begin{center}
+\begin{tabular}{ c c c }
+Stoff &	$\mu_{HR}$ & $\mu_{GR}$\\
+Stahl auf Stahl & 0.2 &	0.1\\
+Stahl auf Holz 	& 0.5 & 0.4\\
+Stahl auf Stein & 0.8 & 0.7\\
+Stein auf Holz 	& 0.9 & 0.7\\
+Leder auf Metall & 0.6 & 0.4\\
+Holz auf Holz &	0.5 & 0.4\\
+Stein auf Stein & 1.0 & 0.9\\
+Stahl auf Eis & 0.03 & 0.01\\
+Stahl auf Beton & 0.35 & 0.20\\
+Gummi auf Beton (trocken) & 1.0 & 0.8\\
+Gummi auf Beton (nass) & 0.3 & 0.25\\
+\end{tabular}
+\end{center}
+\vspace{0.5cm}
+
+Zentripetalkraft $F_z = \frac{v^2}{r} = \dot{\omega}^2\cdot r$
+
+Federkraft $F_f = k\cdot x$
+
+\textbf{Impuls}\\
+$p = m\cdot v$\\
+$F = \frac{\Delta p}{\Delta t}$\\
+Raketengleichung ($R = \frac{\Delta m}{\Delta t}$ pro Zeit ausgestossener Treibstoff)\\
+
+$a(t) = \frac{v_{rel} \cdot R}{m_0-R\cdot t}$\\
+$v(t) = v_{rel}\cdot ln\left(\frac{m_0}{m(t)}\right)$
+
+
+\textbf{Energie}\\
+$E_{pot} = mgh$\\
+$W = \vec{F}\vec{s} = F\cdot cos(\alpha)\cdot s$\\
+$E_{kin} = \frac{1}{2}mv^2$
+
+
+
+
+\vspace{0.5cm}
+\textbf{Kreisbewegung}
+$x = r\cdot cos(\omega)$\\
+$y = r\cdot sin(\omega)$\\
+$s = r\cdot \omega$ (in Radiant!!)\\
+$\omega [rad] = \frac{2\pi}{360} \omega [^\circ]$
+
+
+
+\end{document}

@@ -1,0 +1,1402 @@
+\documentclass[a4paper, 12pt, titlepage=true]{scrreprt}
+\usepackage{graphicx,wrapfig}
+\usepackage{subcaption}
+\usepackage[ngerman]{varioref}
+\usepackage[utf8]{inputenc}
+\usepackage{harvard}
+\usepackage[ngerman]{babel}
+\usepackage[babel,german=swiss]{csquotes}
+\usepackage[usenames,dvipsnames]{color}
+%\usepackage{fancyhdr}
+%\usepackage{rotating}
+%\usepackage{multicol}
+%\usepackage{floatflt}
+\usepackage{enumerate}
+%\usepackage{longtable}
+%\usepackage{tikz}
+%\usepackage{amsmath}
+\usepackage[left=25mm,right=25mm,top=25mm,bottom=35mm]{geometry}
+%\usepackage{enumerate}
+%\usepackage{wrapfig}
+%\usepackage{caption}
+%\usepackage{gensymb}
+
+\usepackage{sidecap}
+\usepackage{amssymb,amsmath}
+\DeclareGraphicsExtensions{.png, .jpg, .jpeg, .eps}
+\graphicspath{{./images/}}
+\setlength{\fboxrule}{4pt}
+\setlength{\fboxsep}{20pt}
+
+\definecolor{blau}{cmyk}{1,0,0.,0}
+\newcounter{loesung}[chapter]
+\newcounter{aufgabe}[chapter]
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+
+\newcommand{\aufgabe}{\refstepcounter{aufgabe}
+\textbf{\vspace{5pt} \\ Aufgabe \thechapter.\theaufgabe: }}
+
+\newcommand{\loesung}{\refstepcounter{loesung}
+\textbf{\vspace{5pt} \\ Loesung \thechapter.\theloesung: }}
+
+\begin{document}
+
+\title{Physik für Baustatiker \\ Loesungen \\ HSLU, HS 2017}
+\author{von \\ \bf{Marco Gähler}}
+\maketitle
+
+%Die Lösungen sind eher für mich selber geschrieben, für die Studenten sollte ich wohl noch ein bisschen mehr Erklärungen hinschreiben.
+\chapter{Einheiten}
+\loesung
+\begin{enumerate}[a)]
+\item $350ms = 350\cdot 10^{-3}s = 0.35s$
+\item $35ng = 35\cdot 10^{-9}g = 35\cdot 10^{-6}c\cdot 10^{-3}g = 35\cdot 10^{-6}mg$
+\item $8m/s = 8\cdot 3.6km/h = 28.8km/h$
+\item $10\frac{kg}{dm^3} = 10\frac{10^3g}{(10cm)^3} = 10\frac{g}{cm^3}$
+\item $\frac{5m}{(3s)^2} = \frac{5}{9}\frac{10^{-3}km}{(1h/3600)^2} = 7200km/h^2$
+\end{enumerate}
+
+\chapter{Kinematik}
+\loesung 
+Diese Aufgabe kann man natürlich Schritt für Schritt lösen, indem man sich die Bedeutung der einzelnen Schritte überlegt. Zuerst rechnet man aus, wie lange man für das erste Stück der Strecke braucht, dann wie lange man noch Zeit hat und erhält schliesslich das Schlussresultat. Es geht aber auch rein mathematisch.
+\begin{equation}
+t = t_1 + t_2 = s_1/v_1 + s_2/v_2 = \frac{5km}{15km/h} + \frac{20km}{40km/h} = 20min + 30min = 50min
+\end{equation}
+
+\loesung
+\begin{equation}
+t_{tot} = t_1 + t_2 = \frac{s_1}{v_1} + \frac{s_2}{v_2}
+\end{equation}
+\begin{equation}
+t_{tot} - \frac{s_1}{v_1} = \frac{s_2}{v_2}
+\end{equation}
+\begin{equation}
+v_2 \cdot (t_{tot} - \frac{s_1}{v_1}) = s_2
+\end{equation}
+\begin{equation}
+v_2 = \frac{s_2}{t_{tot} - s_1/v_1} = \frac{30km}{1h-30km/(40km/h))} = \frac{30km}{(1/4)h} = 120km/h
+\end{equation}
+
+\loesung
+\begin{equation}
+s = (1/2) at^2 = (1/2)gt^2 = 0.5\cdot 9.81m/s^2 \cdot (2s)^2 = 19.6m
+\end{equation}
+
+\loesung
+Auch hier kann man die Aufgabe wieder durch argumentieren, oder durch rechnen lösen. Durch argumentieren: Wie lange dauert es bei dem Geschwindigkeitsunterschied, bis der Startvorsprung weg ist?
+\begin{equation}
+s_M(t) = s_{0M} + v_M t
+\end{equation}
+\begin{equation}
+s_A(t) = 0 + v_A t
+\end{equation}
+\begin{equation}
+s_{gleich} = s_M = s_A = v_A t_g = s_{0M} + v_M t_g
+\end{equation}
+\begin{equation}
+v_A t_g - v_M t_g = s_{0M}
+\end{equation}
+\begin{equation}
+t_g = \frac{s_{M0}}{v_A-v_M} = \frac{10m}{1m/s} = 10s
+\end{equation}
+\begin{equation}
+s_{gleich} = t_g \cdot v_A = 10s\cdot 8m/s = 80m
+\end{equation}
+
+\loesung
+\begin{equation}
+v(t) = v_0 + a\cdot t = 50km/h + 2m/s^2\cdot 3s = 13.9m/s + 6m/s = 19.9m/s = 71.6km/h
+\end{equation}
+
+\loesung
+\begin{equation}
+v(t) = v_0 + at
+\end{equation}
+\begin{equation}
+v_0 = v(t) - at = 15m/s - 4s\cdot 2m/s^2 = 7m/s
+\end{equation}
+
+\loesung
+\begin{equation}
+s_{ich} = vt_g = \frac{1}{2}at_g^2 = s_m
+\end{equation}
+\begin{equation}
+v = \frac{1}{2}at_g \; (t \neq 0)
+\end{equation}
+\begin{equation}
+t_g = \frac{2v}{a} = \frac{2*5m/s}{2m/s^2} = 5s
+\end{equation}
+
+\loesung
+Die erforderte Zeit für den freien Fall ist
+\begin{equation}
+s = \frac{1}{2}gt_f^2 \to t_f = \sqrt{\frac{2s}{g}}
+\end{equation}
+Die Zeit für den Schall ist
+\begin{equation}
+t_s = \frac{s}{v_s}
+\end{equation}
+Zudem gilt $t_{tot} = t_f + t_s$. Also haben wir
+\begin{equation}
+t_{tot} = \sqrt{\frac{2s}{g}} + \frac{s}{v_s}
+\end{equation}
+(eigentlich wäre es einfacher gewesen, $t_f = t_{tot} - f_s$ in die ersten Gleichungen einzusetzen... aber um die quadratische Gleichung kommt man trotzdem nicht herum.)
+
+Diese Gleichung ist nun etwas mühsam zu lösen...
+\begin{equation}
+\sqrt{\frac{2s}{g}} = t_{tot} - \frac{s}{v_s}
+\end{equation}
+\begin{equation}
+\frac{2s}{g} = t^2 - \frac{2ts}{v_s} + \frac{s^2}{v_s^2}
+\end{equation}
+\begin{equation}
+0 = t_{tot}^2 - s\frac{2t}{v_s} - s\frac{2}{g} + \frac{s^2}{v_s^2}
+\end{equation}
+\begin{equation}
+0 = \frac{s^2}{v_s^2} - s\cdot (\frac{2t}{v_s} + \frac{2}{g}) + t_{tot}^2
+\end{equation}
+\begin{equation}
+s_{1,2} = \frac{2t/v_s + 2/g \pm \sqrt{(2t/v_s+2/g)^2 - 4t^2/v_s^2}}{2/v_s^2} 
+\end{equation}
+\begin{equation}
+= \frac{2*4s/330m/s + 2/9.81m/s^2 \pm \sqrt{(2*4s/330m/s+2/9.81m/s^2)^2 - 4*(4s)^2/(330m/s)^2}}{2/(330m/s)^2} 
+\end{equation}
+\begin{equation}
+= 70.3m
+\end{equation}
+
+\chapter{Kräfte}
+\loesung
+\begin{figure}[h]
+ 	\centering
+ 	%\caption{\textsf{\aufgabe text}}
+	\includegraphics[scale = 0.6]{Kraefte_grafisch}	
+	\caption{\textsf{Die resultierende Kraft ist jeweils grün dargestellt.}}
+	%\label{fig:kraefte_addieren}
+\end{figure}
+
+\loesung
+\begin{equation}
+F = m\cdot a = 640kg\cdot 5m/s^2 = 3.2kN
+\end{equation}
+\begin{equation}
+F = 2500kg\cdot 5m/s^2 = 12.5kN
+\end{equation}
+
+\loesung
+\begin{equation}
+F = m\cdot a
+\end{equation}
+Achtung: die SI-Einheit ist das Kilogramm!!
+\begin{equation}
+a = \frac{F}{m} = \frac{3\cdot 10^{-3}N}{10\cdot 10^{-6}kg} = 300m/s^2
+\end{equation}
+
+\loesung
+\begin{enumerate}[a)]
+\item $9.81N$
+\item Ebenfalls $9.81N$. Das Gewicht rechts zieht mit $9.81N$. Das Gewicht links ebenfalls. Das heisst, von Links und Rechts ziehen jeweils $9.81N$. Das ist aber genau der selbe Fall, wie in a)
+\item $9.81N$
+\item jeweils $4.9N$. Man könnte das Seil bei der Rolle auch in 2 Stücke schneiden und beide an der Decke befestigen, dann müsste jedes die Hälfte des Gewichtes tragen.
+\end{enumerate}
+
+\loesung
+Um a) und b) zu berechnen, brauchen wir $Ankathete = Hypotenuse \cdot sin(Winkel)$. c) lässt sich so auch lösen, einfacher geht es aber mit dem Sinussatz
+\begin{equation}
+\frac{a}{sin(\alpha)} = \frac{b}{sin(\beta)} = \frac{c}{sin(\gamma)}.
+\end{equation}
+\begin{figure}[h]
+ 	\centering
+ 	%\caption{\textsf{\aufgabe text}}
+	\includegraphics[scale = 0.5]{Kraefte_trigonometrisch}	
+	%\caption{\textsf{Die resultierende Kraft ist jeweils grün dargestellt.}}
+	%\label{fig:kraefte_addieren}
+\end{figure}
+
+Die Lösung von c) mit dem Sinussatz ist
+\begin{equation}
+F_1 = 80N \frac{sin(30)}{sin(120)} = 46N = F_2.
+\end{equation}
+$F_1$ und $F_2$ sind gleich gross, da es sich um ein gleichschenkliges Dreieck handelt.
+
+\loesung
+\begin{equation}
+F_s = \frac{F_g}{2}\cdot \frac{\sqrt{(0.2m)^2 + (4m)^2}}{0.2m} = 196N
+\end{equation}
+
+\loesung
+\begin{equation}
+F_R = F_s\cdot mu \Rightarrow F_s = \frac{F_R}{\mu} = \frac{F_G}{\mu} = \frac{0.1kg\cdot 9.81m/s^2}{0.3} = 3.3N
+\end{equation}
+
+\loesung
+\begin{equation}
+F_R = F_s \cdot \mu = F_g\cdot \mu
+\end{equation}
+\begin{equation}
+a = \frac{F_R}{m} = \frac{mg\mu}{m} = g\mu = 9.81m/s^2\cdot 0.3 = 2.9m/s^2
+\end{equation}
+
+\loesung
+Der Stein rutscht, sobald die Reibungskraft kleiner ist als die $F_{gp}$. Sei $\alpha$ der Winkel zwischen dem Brett und dem Grund.
+\begin{equation}
+F_R = \mu \cdot F_s = \mu \cdot F_g\cdot  cos(\alpha).
+\end{equation}
+$F_{gp}$ ist gegeben durch
+\begin{equation}
+F_{gp} = F_g \cdot sin(\alpha)
+\end{equation}
+Wir setzen diese beiden Grössen gleich und erhalten
+\begin{equation}
+\mu \cdot F_g\cdot  cos(\alpha) = F_g \cdot sin(\alpha)
+\end{equation}
+\begin{equation}
+\mu \cdot cos(\alpha) =  sin(\alpha)
+\end{equation}
+\begin{equation}
+\mu = tan(\alpha) \Rightarrow \alpha = arctan(\mu) = arctan(0.9) = 42^\circ
+\end{equation}
+Die meisten Stoffe haben eine Reibungskoeffizient von $\leq 1$ und beginnen spätestens bei einer Steigung von $45^\circ$ zu rutschen.
+
+\loesung
+\begin{equation}
+F_{HR} = F_s \cdot \mu_{HR} = F_g \cdot \mu_{HR} = 5kg\cdot 9.81m/s^2\cdot 0.35 = 17.2N.
+\end{equation}
+Dieser Wert ist grösser als die effektive Kraft, also ist die effektive Reibungskraft gerade $15N$. Wenn der Klotz bereits in Bewegung ist, hat der Klotz nur noch Gleitreibung, wodurch sich die Reibungskraft auf $9.8N$ reduziert. Der Klotz wird also beschleunigt.
+
+\loesung
+\begin{equation}
+F_R = F_s\cdot \mu = (F_g-sin(30^\circ)\cdot F)\cdot \mu = F\cdot cos(30^\circ)
+\end{equation}
+\begin{equation}
+F_g\cdot \mu = F\cdot (cos(30^\circ)+\mu\cdot sin(30^\circ)
+\end{equation}
+\begin{equation}
+F = \frac{F_g\mu}{cos(30^\circ)+\mu\cdot sin(30^\circ)} 
+\end{equation}
+\begin{equation}
+= \frac{70kg\cdot 9.81m/s^2\cdot 0.2}{cos(30^\circ)+0.2\cdot sin(30^\circ)} = 142N
+\end{equation}
+
+\loesung
+\begin{equation}
+F = k\cdot \Delta l \Rightarrow k = \frac{F}{\Delta L} = \frac{mg}{\Delta L} = \frac{1kg\cdot 9.81m/s^2}{5\cdot 10^{-3}m} = 1.96kN/m
+\end{equation}
+
+\loesung
+\begin{enumerate}[a)]
+\item Wenn wir beide Federn gleichzeitig um $x$ auslenken, so wirkt die Kraft $F_1 = k_1x$, sowie $F_2 = k_2x$.
+\begin{equation}
+F_{tot} = F_1 + F_2 = (k_1+k_2)x \Rightarrow k_{tot} = k_1 + k_2
+\end{equation}
+\item Wenn die Federn seriell gehängt sind, ist die Kraft jeweils die selbe, dafür werden sie unterschiedlich fest gedehnt: $F = k_1x_1$, $F = k_2x_2$, $F = k_{tot}x$
+\begin{equation}
+x = x_1 + x_2 = F/k_1 + F/k_2 \Rightarrow F = k_{tot}x = k_{tot}\left(\frac{F}{k_1} + \frac{F}{k_2}\right)
+\end{equation}
+\begin{equation}
+k_{tot} = \left(\frac{1}{k_1} + \frac{1}{k_2}\right)^{-1}
+\end{equation}
+Die effektive Federkonstante ist also kleiner als die einzelnen Federkonstanten.
+\end{enumerate}
+
+\loesung
+\begin{enumerate}[a)]
+\item
+\begin{equation}
+F = m\cdot a
+\end{equation}
+\begin{equation}
+F = F_{g3} - F_{g1}, \; m = m_1 + m_2 + m_3
+\end{equation}
+\begin{equation}
+a = \frac{F_3-F_1}{m_1 + m_2 + m_3} = \frac{2kg\cdot 9.81m/s^2 - 1kg\cdot 9.81m/s^2}{1kg + 4kg + 2kg} = 1.40m/s^2
+\end{equation}
+\item Die Kraft welche von $m_3$ auf das Seil wirkt, ist die Gewichtskraft minus die Trägheitskraft, da es in Richtung der Gewichtskraft beschleunigt wird.
+\begin{equation}
+F_{3res} = F_{g3} - m_3a = 2kg\cdot 9.81m/s^2 - 2kg\cdot 1.4m/s^2 = 16.8N
+\end{equation}
+Auf den mittleren Klotz wirkt nur die Trägheitskraft,
+\begin{equation}
+F_{2res} = m_2\cdot a = 4kg \cdot 1.4m/s^2 = 5.6N 
+\end{equation}
+und die Kraft, welche wegen dem dritten Klotz auf das Seil wirkt ist
+\begin{equation}
+F_{1res} = F_{g1} + m_1a = 9.81N + 1kg/codt 1.4m/s^2 = 11.2N
+\end{equation}
+Es gilt offensichtlich, dass $F_{3res} = F_{1res} + F_{2res}$. Die Zugkraft auf das rechte Seil ist grösser, als diejenige auf das linke Seil. Der Unterschied ist die Folge der Trägheitskraft von Klotz 2.
+\end{enumerate}
+
+\loesung
+\begin{enumerate}[a)]
+\item 
+Wir nehmen die Ortsgleichung und werden die (uninteressante) Zeit raus, indem wir sie durch die Geschwindigkeit und die Beschleunigung ersetzen.
+\begin{equation}
+s = \frac{1}{2}at^2, \; v = at \Rightarrow s = \frac{1}{2}\frac{v^2}{a}
+\end{equation}
+\begin{equation}
+a = \frac{v^2}{2s} = \frac{((30/3.6)m/s)^2}{2\cdot 0.5m} = 69m/s^2 \approx 7g
+\end{equation}
+Man kann natürlich Pech haben, aber in Normalfall sollte man $7g$ unverletzt überstehen.
+\item
+\begin{equation}
+F = m\cdot a = 70kg\cdot 69m/s^2 = 4.9kN
+\end{equation}
+\item 
+\begin{equation}
+a = \frac{v^2}{2s} = \frac{((30/3.6)m/s)^2}{2\cdot 10^{-4}m} = 347\cdot 10^3m/s^2
+\end{equation}
+\begin{equation}
+F = m\cdot a = 1kg \cdot 34\cdot 10^3m/s^2 = 347kN
+\end{equation}
+Die Kraft, welche auf den Teddybär wirkt, ist also um ein vielfaches höher als bei Ihnen. Gurten Sie ihn das nächste Mal auch an.
+\end{enumerate}
+
+\loesung
+Die Beschleunigung ist
+\begin{equation}
+a = F/m = \frac{F}{m_1 + m_2}
+\end{equation}
+und die Trägheitskraft lässt sich entsprechend ausrechnen,
+\begin{equation}
+F_2 = m_2a = m_2\frac{F}{m_1+m_2} = F\frac{m_2}{m_1+m_2}.
+\end{equation}
+Die Kraft teilt sich also auf die beiden Klötze auf, wobei sie jeweils proportional zur Masse ist.
+
+Ob der Astronaut frei herum fliegt, oder ob er mit dem Rücken gegen die Raumstation lehnt, macht für diese Aufgabe hier keinen Unterschied. Im ersten Fall wird er durch die Kraft nach hinten beschleunigt, im zweiten Fall werden nur die Kisten beschleunigt. An der Rechnung ändert sich dabei aber nichts.
+
+\loesung
+Dies ist eine einfache Aufgabe zur Trigonometrie,
+\begin{equation}
+x = r\cdot cos(\omega)
+\end{equation}
+\begin{equation}
+y = r\cdot sin(\omega)
+\end{equation}
+Der Umfang des Kreises ist
+\begin{equation}
+u = 2\pi r.
+\end{equation}
+Wir schneiden hier aber nur ein Kuchenstück heraus. Die Bogenlänge davon ist proportional zum Winkel $\omega$ und für $360^\circ$ müssen wir den Umfang erhalten. Wir haben also
+\begin{equation}
+s = u \frac{\omega}{360^\circ} = 2\pi r\frac{\omega}{360^\circ}
+\end{equation}
+
+\loesung
+\begin{enumerate}[a)]
+\item
+Damit man im Looping nicht herunterfällt, muss die Zentripetalkraft mindestens so gross sein, wie die Gewichtskraft, also
+\begin{equation}
+F_z = F_g, \; m\frac{v^2}{r} = mg \Rightarrow v = \sqrt{rg} = \sqrt{20m\cdot 9.81m/s^2} = 14m/s
+\end{equation}
+\item
+Am tiefsten Punkt wirken die Gewichts- und die Zentripetalkraft in die selbe Richtung. Falls man mit der in a) ausgerechneten Mindestgeschwindigkeit fährt, so spürt man gerade $2mg$.
+\end{enumerate}
+
+\loesung
+\begin{equation}
+F_z = m\dot{\omega}^2(L + \Delta L) = F_f = k\cdot \Delta L
+\end{equation}
+\begin{equation}
+m\dot{\omega}^2L = k\Delta L - m\dot{\omega}^2\Delta L
+\end{equation}
+\begin{equation}
+\Delta L = L\frac{m\dot{\omega}^2}{k-m\dot{\omega}^2} = 0.15m\frac{1kg(3rad/s)^2}{100N/m-1kg\cdot (3rad/s)^2} = 1.4cm
+\end{equation}
+
+\loesung
+\begin{enumerate}[a)]
+\item
+Die Kraft zeigt nach innen, senkrecht zur Richtung der Schnur. Wenn wir wie bei der schiefen Ebene die Gewichts- und die Stützkraft addieren, bekommen wir die entsprechende Kraftkomponente.
+\item
+\begin{equation}
+tan(\beta) = \frac{F_z}{F_g} = \frac{\dot{\omega}^2r}{g}
+\end{equation}
+\begin{equation}
+\beta = atan\left(\frac{\dot{\omega}^2r}{g}\right)
+\end{equation}
+\item
+\begin{equation}
+F_s = \sqrt{F_z^2+F_g^2} = m\cdot \sqrt{(\dot{\omega}^2r)^2 + g^2}
+\end{equation}
+\item
+Die Zentripetalkraft zeigt in Richtung des Radius, die Gewichtskraft senkrecht nach unten.
+\begin{equation}
+\frac{H}{r} = \frac{F_g}{F_z} = \frac{mg}{m\dot{\omega}^2r} 
+\end{equation}
+\begin{equation}
+H = \frac{g}{\dot{\omega}^2}
+\end{equation}
+$H$ hängt also weder von $r$, $L$ oder $m$ ab. Wenn wir verschiedene Gewichte an unterschiedlich langen Schnüren um die Stange drehen lassen, so werden sie alle auf der selben Höhe sein!
+\end{enumerate}
+
+\iffalse
+%ohne TR ist die Gleichung nicht lösbar...
+\loesung
+Sei $\beta$ der Winkel, in welchen die Ketten hängen. $r_0$ ist der Abstand vom Befestigungspunkt zur Drehachse, und $s$ die Länge der Kette.
+\begin{equation}
+F_z = m\dot{\omega}^2 r = m\dot{\omega}^2 (r_0 + s\cdot sin(\beta))
+\end{equation}
+\begin{equation}
+F_z = tan(\beta) F_g
+\end{equation}
+Dies können wir nun einsetzen und erhalten
+\begin{equation}
+tan(\beta)mg = m\omega^2 (r_0 + s\cdot sin(\beta))
+\end{equation}
+\begin{equation}
+
+\end{equation}
+\fi
+
+\loesung
+\begin{enumerate}[a)]
+\item 
+Wie immer nützt es, wenn man zuerst eine gute Skizze macht, und sich mal überlegt, wie das Kräftedreieck aussieht. Dabei muss man beachten, dass die Beschleunigung gerade zum Zentrum des Kreises zeigt, also waagrecht nach innen. Die Zentrifugalkraft zeigt also horizontal nach aussen. Bei dieser Teilaufgabe gibt es keine Kräfte (welche uns interessieren), welche parallel zur Oberfläche der Bahn sind.
+\begin{figure}[h]
+ 	\centering
+ 	%\caption{\textsf{\aufgabe text}}
+	\includegraphics[scale = 0.5]{steilkurve1}	
+	\caption{\textsf{Kräftedreieck für Aufgabe a)}}
+	%\label{fig:kraefte_addieren}
+\end{figure}
+Mit Trigonometrie erhält man sofort, dass 
+\begin{equation}
+F_z = tan(\beta)F_g \Rightarrow m\frac{v^2}{r} = tan(\beta)mg .
+\end{equation}
+\begin{equation}
+v = \sqrt{r\cdot tan(\beta)g} = \sqrt{70m\cdot tan(36^\circ)9.81m/s^2} = 22.3m/s = 80.4km/h
+\end{equation}
+\item 
+Diese Aufgabe ist sehr tricky. Durch die Reibung und die Stützkraft ergibt sich eine nach innen gerichtete Reibungskraft. So können die Autos schneller fahren. Dies wiederum erhöht die Zentripetalkraft, aber auch die Stützkraft. Am einfachsten ist es, wenn wir die Kräfte in ihre y- und r-Komponenten zerlegen.
+\begin{figure}[h]
+ 	\centering
+ 	%\caption{\textsf{\aufgabe text}}
+	\includegraphics[scale = 0.4]{steilkurve3}	
+	\caption{\textsf{Die vier involvierten Kräfte müssen jeweils in die y- und r-Komponenten zerlegt werden, so kann man sie einfacher addieren.}}
+	%\label{fig:kraefte_addieren}
+\end{figure}
+
+Für die y-Komponente erhalten wir:
+\begin{equation}
+F_s\cdot cos(\beta) = F_R\cdot sin(\beta) + F_g
+\end{equation}
+und für die r-Komponente:
+\begin{equation}
+F_s\cdot sin(\beta) + F_R\cdot cos(\beta) = F_z
+\end{equation}
+Zudem gilt für die maximale Reibungskraft $F_R = \mu F_s$. Dies können wir in beide Gleichungen einsetzen. Die erste Gleichung lösen wir nach $F_s$ auf, und setzen dies in die zweite Gleichung ein.
+\begin{equation}
+F_s\cdot cos(\beta) = F_s\mu\cdot sin(\beta) + F_g
+\end{equation}
+\begin{equation}
+F_s = \frac{F_g}{cos(\beta) - \mu\cdot sin(\beta)}
+\end{equation}
+Von der zweiten Gleichung her haben wir
+\begin{equation}
+F_s\cdot sin(\beta) + F_s\mu cos(\beta) = m\frac{v^2}{r}
+\end{equation}
+\begin{equation}
+F_g \frac{sin(\beta) + \mu cos(\beta)}{cos(\beta) - \mu\cdot sin(\beta)} = m\frac{v^2}{r}
+\end{equation}
+\begin{equation}
+v = \sqrt{rg\frac{sin(\beta) + \mu\cdot cos(\beta)}{cos(\beta) - \mu\cdot sin(\beta)}}
+\end{equation}
+\begin{equation}
+v = \sqrt{70m\cdot 9.81m/s^2 \frac{sin(36^\circ) + 1\cdot cos(36^\circ)}{cos(36^\circ - 1\cdot sin(36^\circ)}} = 65.8m/s = 237km/h
+\end{equation}
+In Wirklichkeit ist die Geschwindigkeit noch höher, da die Autos aerodynamisch so gebaut sind, dass sie Abtrieb haben, die Stützkraft also deutlich grösser ist, als was wir hier berechnet haben.
+
+Wenn wir einfach mal mit dem Winkel herumspielen, sieht man ziemlich schnell, dass für $\mu = 1$ die Autos ab einer Steigung von $45^\circ$ unendlich schnell fahren können, ohne aus der Bahn getragen zu werden. Ab diesem Winkel nimmt die Stützkraft bei höheren Geschwindigkeiten gleich stark zu, wie die Zentrifugalkraft.
+
+\end{enumerate}
+
+\iffalse
+%Das war falsch...
+Wir wissen bereits, dass $F_{z1} = tan(\beta)F_g$. Im zweiten Dreieck haben wir
+\begin{equation}
+F_{z2} = F_R/cos(\beta)
+\end{equation}
+\begin{equation}
+F_R = F_s \mu = (F_{s1} + F_{s2})\mu
+\end{equation}
+\begin{equation}
+F_{s2} = F_{z2}sin(\beta)
+\end{equation}
+\begin{equation}
+F_{s1} = F_g/cos(\beta)
+\end{equation}
+Nun müssen wir die Gleichungen so kombinieren, dass wir schlussendlich die Zentripetalkraft erhalten.
+\begin{eqnarray}
+F_{z2} &= (F_{s1} + F_{s2})\mu cos(\beta) \\
+ &= \left(\frac{F_g}{cos(\beta)} + F_{z2}sin(\beta)\right)\mu cos(\beta)
+\end{eqnarray}
+Dies müssen wir nun nach $F_{z2}$ auflösen.
+\begin{equation}
+F_{z2} - F_{z2}sin(\beta)\mu cos(\beta) = F_g \mu
+\end{equation}
+\begin{equation}
+F_{z2} = \frac{F_g \mu}{1 - sin(\beta) \mu cos(\beta)}
+\end{equation}
+\begin{equation}
+F_z = F_{z1} + F_{z2} =  F_g tan(\beta) + F_g\frac{\mu}{1 - sin(\beta) \mu cos(\beta)}
+\end{equation}
+\begin{equation}
+v = \sqrt{rg\left(tan(\beta) + \frac{\mu}{1 - sin(\beta) \mu cos(\beta)}\right)}
+\end{equation}
+Dieses Resultat können wir kurz auf die Plausibilität prüfen: Für $\mu = 0$ erhalten wir das selbe Resultat, wie in a). Es kann zumindest stimmen.
+
+Für $r = 70m$, $\beta = 26^\circ$ und $\mu = 1$ erhalten wir
+\begin{equation}
+v = \sqrt{70m\cdot 9.81m/s^2\left(tan(36^\circ) + \frac{1}{1 - sin(36^\circ)\cdot cos(36^\circ)}\right)} = 42.5m/s = 153km/h
+\end{equation}
+In Wirklichkeit ist die Geschwindigkeit deutlich höher, da die Autos durch den Heckspoiler etc. noch stärker gegen den Boden gedrückt werden.
+\end{enumerate}
+\fi
+
+\chapter{Energie}
+Die Aufgaben und Lösungen, welche Integration erfordern, müssen entfernt werden!!
+\loesung 
+\begin{enumerate}[a)]
+\item
+\begin{equation}
+E_{pot} = mgh = 80kg\cdot 10m/s^2 \cdot 1700m = 1.36MJ
+\end{equation}
+\item
+\begin{equation}
+V = \frac{1360kJ}{134kJ/100ml)} = 1l
+\end{equation}
+Ein guter Liter Apfelschorle reicht also. Da der menschliche Körper aber sehr ineffizient ist, braucht man ein vielfaches davon.
+\end{enumerate}
+
+\loesung
+Bei einem Flaschenzug verringert sich die erforderte Kraft, dafür erhöht sich die Strecke um den selben Faktor.
+
+\loesung
+Man zieht die Kiste entgegen der Reibungskraft, sowie $F_{gp}$ nach oben. Diese beiden Kräfte sind gegeben durch
+\begin{equation}
+F_R = F_g\cdot \mu \cdot cos(\beta)
+\end{equation}
+\begin{equation}
+F_{gp} = F_g\cdot sin(\beta)
+\end{equation}
+Die Länge $s$ der Rampe ist gegeben durch
+\begin{equation}
+s = h/sin(\beta).
+\end{equation}
+Daraus folgt:
+\begin{equation}
+W = (F_R = F_{gp})\frac{h}{sin(\beta)} = F_g h\frac{\mu \cdot cos(\beta) + sin(\beta)}{sin(\beta)}
+\end{equation}
+\begin{enumerate}[a)]
+\item  
+\begin{equation}
+W_a = 100kg\cdot 10m/s^2\cdot 2m\frac{0.1 \cdot cos(15) + sin(15)}{sin(15)} = 2.7kJ
+\end{equation}
+\item 
+\begin{equation}
+W_a = 100kg\cdot 10m/s^2\cdot 2m\frac{0.1 \cdot cos(30) + sin(30)}{sin(30)} = 2.3kJ
+\end{equation}
+\item
+Am effizientesten ist es, wenn man die Kiste senkrecht nach oben zieht, dann gibt es keine Reibungskraft. Andererseits muss man dann $1kN$ heben können.
+\end{enumerate}
+
+\loesung
+\begin{equation}
+W = \int_0^5 F(s) ds = \int_0^5 k\cdot s ds = \frac{1}{2}ks^2\Big|_0^{5cm}
+\end{equation}
+\begin{equation}
+= \frac{1}{2}2kN/m\cdot (0.05m)^2 = 2.5J
+\end{equation}
+
+\loesung
+\begin{equation}
+W = int_1^3 F(s)ds = \int_1^3 \lambda \cdot g\cdot s ds = \lambda \cdot g\cdot s^2/2\Big|_{1m}^{3m}
+\end{equation}
+\begin{equation}
+ = 2kg/m\cdot 10m/s^2\cdot \frac{1}{2} \cdot ((3m)^2 - (1m)^2) = 80J
+\end{equation}
+Bei der Potentiellen Energie muss man die Kette in zwei Teile aufteilen. Der eine hängt bereits, der andere liegt noch auf dem Tisch. Bei ersterem rutscht der Mittelpunkt $2m$ nach unten, bei letzterem um $1m$. Die von der Gravitationskraft geleistete Arbeit ist
+\begin{equation}
+W = m_1\cdot g\cdot s_1 + m_2\cdot g \cdot s_2 = 2kg\cdot 10m/s^2\cdot 2m + 4kg\cdot 10m/s^2\cdot 1m = 80J
+\end{equation}
+
+\loesung
+\begin{enumerate}[a)]
+\item
+\begin{equation}
+F_z = m\frac{v(r)^2}{r} = 0.12kg\frac{(0.28m^2/s/0.4m)^2}{0.4m} = 0.15N
+\end{equation}
+\begin{equation}
+0.12kg\frac{(0.28m^2/s/0.1m)^2}{0.1m} = 9.4N
+\end{equation}
+\item 
+\begin{equation}
+W = \int F(r)dr = \int m\frac{v(r)^2}{r}dr = \int m\frac{(0.28m^2/s)^2}{r^3}dr = \frac{0.12kg\cdot (0.28m^2/s)^2}{-2\cdot r^2}\Big|_{0.4m}^{0.1m}
+\end{equation}
+\begin{equation}
+= 0.12kg\cdot (0.28m^2/s)^2/2\cdot \left(\frac{1}{(0.1m)^2}-\frac{1}{(0.4m)^2}\right) = 0.44J
+\end{equation}
+\end{enumerate}
+
+\loesung
+\begin{equation}
+E = mgh = \frac{1}{2}mv^2 \Rightarrow v = \sqrt{2gh} = \sqrt{2\cdot 10m/s^2 \cdot 20m} = 20m/s
+\end{equation}
+Dies kann man natürlich auch mit den Formeln der Kinematik ausrechnen.
+
+\loesung
+Damit man nicht aus dem Wagen fallen kann, muss die Zentrifugalkraft immer mindestens gleich gross sein, wie die Gewichtskraft. Am höchsten Punkt muss also gelten
+\begin{equation}
+m\frac{v^2}{r} = mg \Rightarrow v^2 = gr
+\end{equation}
+Die kinetische Energie am höchsten Punkt ist 
+\begin{equation}
+E_{kin} = \frac{1}{2}mv^2 = \frac{1}{2}mgr = mgh = E_{pot}
+\end{equation}
+Hier sieht man auch schon, dass der Ausdruck wie eine potentielle Energie aussieht. Dabei muss der Wagen bis auf eine Höhe $r/2$ über den höchsten Punkt des loopings gezogen werden. Die Höhe der Achterbahn muss also mindestens $h = \frac{5}{2}r$ betragen.
+
+\loesung
+Die potentielle Energie nimmt nach oben hin zu, folglich muss die kinetische Energie, und entsprechend auch die Geschwindigkeit abnehmen. Wenn die Geschwindigkeit abnimmt, so reduziert sich gemäss $F_z = m\frac{v^2}{r}$ auch die Zentrifugalkraft. Da es aber deutlich angenehmer ist, wenn die Kräfte konstant sind, reduziert man nach oben hin den Kurvenradius.
+
+\chapter{Impuls}
+\loesung
+\begin{enumerate}[a)]
+\item 
+\begin{equation}
+\Delta p = m\cdot \Delta v = 0.4kg\cdot (30m/s- (-20m/s)) = 20Ns
+\end{equation}
+\item 
+\begin{equation}
+F = \frac{\Delta p}{\Delta t} = \frac{20Ns}{0.01s} = 2kN
+\end{equation}
+\end{enumerate}
+
+\loesung
+\begin{enumerate}[a)]
+\item
+\begin{equation}
+F = \frac{\Delta p}{\Delta t} = \frac{m}{t}\cdot v = 1.5kg/s\cdot 20m/s = 30N
+\end{equation}
+\item
+Grösser, da der Geschwindigkeitsunterschied zunimmt.
+\end{enumerate}
+
+\loesung
+Die Kraft können wir aus der Formel
+\begin{equation}
+F = \frac{\Delta p}{\Delta t}
+\end{equation}
+berechnen. Die Impulsänderung ist gegeben durch
+\begin{equation}
+\Delta p = \Delta m \cdot v.
+\end{equation}
+Wie man die Masse berechnen muss ist bei dieser Aufgabe auf den ersten Blick vermutlich nicht ganz klar. Sie ist gegeben durch die Masse der Luft, welche im Zeitintervall $\Delta t$ abgebremst werden muss. Die Masse berechnet man mit
+\begin{equation}
+m = V\cdot \rho = \Delta l \cdot A \cdot \rho,
+\end{equation}
+wobei wir $\Delta l \cdot A$ das Volumen der abzubremsenden Luft ist. Nun ist noch die Frage, wie wir das $\Delta l$ zu interpretieren haben. Dazu setzen wir die Formeln zusammen und formen um: 
+\begin{equation}
+F = \frac{\Delta p}{\Delta t} = \frac{\Delta m\cdot v}{\Delta t} = \frac{\Delta l \cdot A\rho v}{\Delta t} = \frac{\Delta l}{\Delta t}A\rho v
+\end{equation}
+Der Term $\frac{\Delta l}{\Delta t}$ entspricht dabei genau der Geschwindigkeit der Luft. Die Kraft kann man entsprechend durch
+\begin{equation}
+F = \rho A v^2 = 1.2kg/m^3 \cdot 40m\cdot 60m\cdot \left(\frac{100}{3.6}m/s\right)^2 = 2.2MN
+\end{equation}
+berechnen. Die Kraft ist also proportional zur Geschwindigkeit im Quadrat: einmal wegen dem Impuls und ein zweites mal wegen der Masse, welche jede Sekunde an die Wand gedrückt wird.
+
+Alternativ kann man für $\Delta t$ einen beliebigen Wert einsetzen und sich überlegen, welche Masse Luft in dieser Zeit abgebremst wird. $\Delta l$ ist dann die währen dieser Zeit zurückgelegte Strecke der Luft.
+
+\loesung
+\begin{equation}
+\frac{1}{2}m_a (v_{a1}+v_{a2})\cdot (v_{a1}-v_{a2})=\frac{1}{2} m_b (v_{b2}+v_{b1})(v_{b2}-v_{b1}).
+\end{equation}
+geteilt durch
+\begin{equation}
+m_a (v_{a1}-v_{a2}) = m_b (v_{b2}-v_{b1})
+\label{eq:impuls2}
+\end{equation}
+ergibt
+\begin{equation}
+v_{a1}+v_{a2} = v_{b1} + v_{b2}.
+\label{eq:impuls3}
+\end{equation}
+Gleichung \ref{eq:impuls3} multiplizieren wir nun mit $m_a$, addieren Gleichung \ref{eq:impuls2} ($v_{a2}$ fällt dadurch raus) und lösen nach $v_{b2}$ auf.
+\begin{equation}
+m_a\cdot(v_{a1}+v_{a2}) = m_a\cdot (v_{b1} + v_{b2}).
+\end{equation}
+\begin{equation}
+2m_a\cdot v_{a1} = m_a\cdot (v_{b1} + v_{b2}) + m_b \cdot (v_{b2}-v_{b1})
+\end{equation}
+\begin{equation}
+(m_a+m_b)\cdot v_{b2} = 2m_av_{a1} - m_a v_{b1} + m_b v_{b1}
+\end{equation}
+\begin{equation}
+v_{b2} = \frac{2m_av_{a1} - m_a v_{b1} + m_b v_{b1}}{m_a+m_b} = 2\frac{m_a v_{a1}+m_b v_{b1}}{m_a + m_b} - v_{b1}
+\end{equation}
+
+\loesung
+Der Impuls bleibt erhalten. Da die Masse nach dem Stoss sich verdoppelt hat, muss die Geschwindigkeit sich halbieren. Nach
+\begin{equation}
+E = \frac{1}{2}mv^2 = \frac{1}{2}\frac{p^2}{m}
+\end{equation}
+hat letzteres aber einen grösseren Effekt auf die kinetische Energie, welche sich folglich halbiert. Dies wird einfacher ersichtlich, wenn man die kinetische Energie in Impuls und Masse ausdrückt. Durch den Stoss erhöht sich die Masse, während der Impuls konstant bleibt.
+
+\loesung
+Die Kugel wird mit $m$ bezeichnet, das Gewehr mit $M$. Das Gewehr muss sich wegen der Impulserhaltung nach hinten bewegen. Wir rechnen das $-$ bei den Vektoren ein und rechnen hier mit positiven Zahlen.
+\begin{equation}
+p_m = p_M
+\end{equation}
+\begin{equation}
+m\cdot v_m = M \cdot v_M
+\end{equation}
+\begin{equation}
+v_M = v_m\frac{m}{M} = 300m/s\frac{5g}{3kg} = 0.5m/s
+\end{equation}
+\begin{equation}
+E_{kin,m} = \frac{1}{2}m\cdot v_m^2 = \frac{1}{2}\cdot 5\cdot 10^{-3}kg\cdot (300m/s)^2 = 225J
+\end{equation}
+\begin{equation}
+E_{kin,M} = \frac{1}{2}M\cdot v_M^2 = \frac{1}{2}\cdot 3kg\cdot (0.5m/s)^2 = 0.375J
+\end{equation}
+Das entspricht gerade dem umgekehrten Verhältnis der Massen. Der Impuls muss jeweils gleich gross sein und die kinetische Energie lässt sich als Funktion des Impulses und der Masse umschreiben zu
+\begin{equation}
+E_{kin} = \frac{1}{2}mv^2 = \frac{1}{2}\frac{p^2}{m}.
+\end{equation}
+Je schwerer das Objekt, desto kleiner wird die kinetische Energie sein.
+
+\loesung
+\begin{equation}
+E_{kin} = \frac{1}{2}\frac{p^2}{m_{tot}} = \frac{1}{2}\frac{mv_m^2}{m+M} = (m+M)gh
+\end{equation}
+\begin{equation}
+v  = \frac{m+M}{m}\sqrt{2gh} = \frac{2005g}{5g}\sqrt{2\cdot 10m/s^2 \cdot 0.03m} = 310m/s
+\end{equation}
+
+\loesung
+Man muss sich hier nicht die Mühe machen, und alle Energien ausrechnen. Es reicht, wenn man die Verhältnisse hat. Zuerst müssen wir herausfinden, wie $v_{m2}$ von $v_{m1}$, $m$ und $M$ abhängt. Die Intuition sagt uns (hoffentlich) schon, dass die Geschwindigkeiten proportional zu einander sein müssen.
+\begin{equation}
+v_{m2} = \frac{2mv_{m1}}{m + M} -v_{m1} = v_{m1} \frac{m-M}{m+M}
+\end{equation}
+Die kinetische Energie ist proportional zur Geschwindigkeit im Quadrat,
+\begin{equation}
+E_{m2} = E_{m1}\left(\frac{m-M}{m+M}\right)^2
+\end{equation}
+und die Höhe proportional zur Energie,
+\begin{equation}
+h_2 = h_1 \left(\frac{m-M}{m+M}\right)^2 = 3.6m\frac{7kg-2.2kg}{7kg+2.2kg} = 0.98m
+\end{equation}
+
+\loesung
+\begin{equation}
+F = \frac{\Delta m}{\Delta t}\cdot v_{rel} = 10^4kg/s\cdot 3000m/s = 30MN
+\end{equation}
+\begin{equation}
+a = \frac{Rv_{rel}}{m} = 15m/s^2
+\end{equation}
+
+\loesung
+Hier müssen wir noch die Gravitationsbeschleunigung beachten. Deshalb ist es wichtig, dass die Rakete den Treibstoff so schnell wie möglich raus haut.
+\begin{enumerate}[a)]
+\item
+\begin{equation}
+v = v_{rel}\cdot ln\left(\frac{m_0}{m}\right) -gt = 2400m/s\cdot ln(4) -90s\cdot 10m/s^2 = 2.4km/s
+\end{equation}
+\item
+Die Rakete würde in $120s$ ihre ganze Masse verbrauchen,
+\begin{equation}
+a = \frac{F(m)}{m} = \frac{\Delta m/\Delta t}{m}\cdot v_{rel} = \frac{m/120s}{m}\cdot 2400m/s = 20m/s^2
+\end{equation}
+Am Ende der Beschleunigung ist die Masse der Rakete noch ein Viertel so gross, wobei die Kraft konstant bleibt. Die Beschleunigung ist entsprechend viermal so gross, $a = 80m/s^2$. Bei beiden Beschleunigungen muss man noch die Gravitationsbeschleunigung abziehen, also haben wir
+\begin{equation}
+a_{beg } = 2g - g = g, \; a_{end} = 8g - g = 7g
+\end{equation}
+Viel stärker sollte man nicht beschleunigen, da die Kräfte auf die Astronauten sonst zu gross werden.
+\end{enumerate}
+
+\loesung
+Die Rakete verbraucht also $1560t\cdot \frac{3}{4}$ Treibstoff während $90s$.
+\begin{equation}
+F = \frac{\Delta m}{\Delta t}\cdot v_{rel} = \frac{1560\cdot 10^3kg\frac{3}{4}}{90s}\cdot 2400m/s = 31MN 
+\end{equation}
+
+\chapter{Leistung}
+\loesung
+\begin{equation}
+P = \frac{E}{t} = \frac{mgh}{t} = \frac{80kg\cdot 10m/s^2\cdot 1700m}{2\cdot 3600s} = 189W
+\end{equation}
+
+\loesung
+\begin{equation}
+P = F\cdot v = 2kN\cdot \frac{120}{3.6}m/s = 67kW
+\end{equation}
+ 
+\loesung
+\begin{equation}
+v(t) = a\cdot t
+\end{equation}
+\begin{equation}
+P = F\cdot v = m\cdot a\cdot v(t) = ma^2\cdot t
+\end{equation}
+
+\loesung
+Wenn man den Berg mit konstanter Geschwindigkeit herunterfährt, wandelt man potentielle Energie in Reibungsenergie um. 
+\begin{enumerate}[a)]
+\item 
+Die Kraft, welche durch den Luftwiderstand wirkt, ist dabei genau gleich gross, wie die Parallelkomponente der Gewichtskraft,
+\begin{equation}
+F_{lw} = F_g\cdot sin(\alpha) = 75kg\cdot sin(3^\circ) = 39N
+\end{equation}
+\item
+\begin{equation}
+P = F\cdot v = (F_{gp} + F_{lw})\cdot v = 2\cdot 39N \cdot 5m/s = 390N 
+\end{equation}
+\end{enumerate}
+
+\loesung
+\begin{equation}
+E = P\cdot t = \frac{1}{2}mv^2
+\end{equation}
+\begin{equation}
+v(t) = \sqrt{\frac{2Pt}{m}}
+\end{equation}
+Die Geschwindigkeit nimmt also nur mit der Wurzel der Zeit zu, weil die kinetische Energie mit $v^2$ zunimmt!
+
+\chapter{Kreisbewegungen}
+\loesung
+Aus Symmetriegründen muss der Schwerpunkt auf der x-Achse liegen. Die x-Koordinate beträgt
+\begin{equation}
+x_s = \frac{2\cdot 1u\cdot cos(52^\circ \cdot 9.57\cdot 10^{-11}m}{18u} = 6.5\cdot 10^{-12}m
+\end{equation}
+
+\loesung
+Wir sägen in unseren Gedanken die Platte in zwei rechteckige Teile. Die Schwerpunkte liegen jeweils in der Mitte und das Gewicht ist proportional zur Fläche.
+\begin{equation}
+x_s = \frac{0.4m\cdot (0.4m\cdot 0.8m) + 0.7m\cdot (0.2m\cdot 0.2m)}{0.4m\cdot 0.8m + 0.2m\cdot 0.2m} = 0.43m
+\end{equation}
+\begin{equation}
+y_s = \frac{0.2m\cdot (0.4m\cdot 0.8m) + 0.5m\cdot (0.2m\cdot 0.2m)}{0.4m\cdot 0.8m + 0.2m\cdot 0.2m} = 0.23m
+\end{equation}
+
+\loesung
+Hier kann man mit Symmetrien argumentieren, die Schwerpunkte müssen immer auf den Symmetrieachsen liegen, falls es mehrere davon gibt auf deren Schnittpunkt (dieser muss eindeutig sein).
+\begin{enumerate}[a)]
+\item halbe Höhe, auf in der Mitte
+\item $1/3$ der Höhe
+\item $1/4$ der Höhe, $1/4$ nach rechts
+\item in der Mitte des Dreiecks
+\end{enumerate}
+
+\loesung
+Ramon ist zuerst bei der Thermosflasche, da er leichter ist. Der Schwerpunkt bewegt sich nicht, da es keine äusseren Kräfte gibt, er beträgt 
+\begin{equation}
+x_s = \frac{-10m\cdot 90kg + 10kg\cdot 60kg}{90kg + 60kg} = -2m
+\end{equation}
+Wenn Ramon bei der Thermosflasche ist, so muss James beim Ort
+\begin{equation}
+x_J = \frac{x_s(m_J + m_R) - 0m\cdot 60kg}{90kg} = \frac{-2m(90kg + 60kg) - 0}{90kg} = -3.33m
+\end{equation}
+James hat $3/2$ mal die Masse von Ramon, also wird er auch nur $2/3$ so weit gezogen. Ramon wird $10m$ weit gezogen, währenddessen James nur $6.67m$ weit gezogen wird.
+
+\loesung
+Der Baron ist ein abgeschlossenes System, bei welchem der Schwerpunkt nur durch eine äussere Kraft bewegt werden kann.
+
+\loesung
+Wie bereits im Skript steht: wenn man mit den Kreisbewegungen nicht klarkommt, ignoriert man den Ausdruck Kreis- vorerst am besten einfach mal und rechnet die lineare Bewegung aus. Wenn man $a$ durch $\ddot{\omega}$ ersetzt etc., findet man schnell die Lösung.
+\begin{enumerate}[a)]
+\item 
+\begin{equation}
+t = \frac{\dot{\omega}}{\ddot{\omega}} = \frac{27.5rad/s}{10rad/s^2} = 2.75s
+\end{equation}
+\item 
+\begin{equation}
+\dot{\omega}(t=0.3s) = \dot{\omega_0} + \ddot{\omega}\cdot t = 27.5rad/s - 10rad/s^2\cdot 0.3s = 24.5rad/s
+\end{equation}
+\begin{equation}
+\omega = \omega_0 + \dot{\omega}\cdot t + \frac{1}{2}\ddot{\omega}\cdot t^2 = 0 + 27.5rad/s\cdot 0.3s - \frac{1}{2}\cdot 10rad/s^2\cdot (0.3s)^2 = 7.8rad = 1.52rad
+\end{equation}
+Im letzten Schritt haben wir benutzt, dass Winkel $2\pi$ periodisch sind (bei Grad gilt analog $450^\circ = 90^\circ$)
+\end{enumerate}
+
+\loesung
+Die radiale Beschleunigung ist gerade durch die Zentripetalkraft gegeben,
+\begin{equation}
+a_z = \dot{\omega}^2 \cdot r = (10rad/s)^2\cdot 0.8m = 80m/s^2.
+\end{equation}
+Die tangentiale Beschleunigung entspricht der eigentlichen Beschleunigung, da diese die absolute Geschwindigkeit erhöht,
+\begin{equation}
+a = r \cdot \ddot{\omega} = 0.8m\cdot 50rad/s^2 = 40m/s^2.
+\end{equation}
+
+\loesung
+\begin{equation}
+v = \sqrt{r^2\dot{\omega}^2 + v_A^2}
+\end{equation}
+\begin{equation}
+\Rightarrow r = \frac{\sqrt{v^2-v_A^2}}{\dot{\omega}} = \frac{\sqrt{(270m/s)^2 - (75m/s)^2}}{(2400/60)\cdot 2\pi rad/s} = 1.03m
+\end{equation}
+Der Propeller dreht mit einer konstanten Frequenz und das Flugzeug fliegt mit einer konstanten Geschwindigkeit. Die einzige Beschleunigung ist die Zentripetalbeschleunigung.
+\begin{equation}
+a_z = \dot{\omega}^2\cdot r = (2400/60\cdot 2\pi rad/s)^2  \cdot 1.03m = 65km/s^2
+\end{equation}
+
+\loesung
+Die Punktmassen B und C liegen genau auf der Rotationsachse, folglich ist ihr Trägheitsmoment genau 0 und wird in der folgenden Rechnung nicht hingeschrieben.
+\begin{equation}
+I_{BC} = 0.3kg\cdot (0.4m)^2 = 0.048kgm^2
+\end{equation} 
+\begin{equation}
+E_{rot,BC} = \frac{1}{2}\dot{\omega}^2 \cdot I_{BC} = \frac{1}{2}(4rad/s)^2\cdot 0.05kgm^2 = 0.38J
+\end{equation}
+\begin{equation}
+I_A = 0.2kg\cdot (0.4m)^2 + 0.1kg\cdot (0.5m)^2 = 0.057kgm^2
+\end{equation}
+\begin{equation}
+E_{rot,A} = \frac{1}{2}\dot{\omega}^2 \cdot I_{A} = \frac{1}{2}(4rad/s)^2\cdot 0.057kgm^2 = 0.46J
+\end{equation}
+
+\loesung
+Das Trägheitsmoment durch den Schwerpunkt beträgt
+\begin{equation}
+I_s = \frac{1}{12}mL^2
+\end{equation}
+Die Verschiebung ist $h = L/2$, somit haben wir laut Steiner
+\begin{equation}
+I_p = I_s + mh^2 = \frac{1}{12}mL^2 + m(L/2)^2 = \left(\frac{1}{12} + \frac{1}{4}\right)mL^2 = \frac{1}{3}mL^2
+\end{equation}
+
+\loesung
+Beim dünnwandigen Zylinder befinden sich alle Massen im Abstand $r$ zum Schwerpunkt, folglich ist das Trägheitsmoment einfach
+\begin{equation}
+I_s = m\cdot r^2
+\end{equation}
+
+\loesung
+Das Trägheitsmoment durch den Schwerpunkt (Drehachse kommt senkrecht aus dem Blatt raus), ist das Trägheitsmoment der 4 Kugeln plus Steiner für die Kugeln,
+\begin{equation}
+I_{s1} = 4\cdot (\frac{2}{5}m(a/2)^2 + m(\sqrt{2}\cdot a)^2) = \frac{42}{5}ma^2
+\end{equation}
+Das Trägheitsmoment um A ist
+\begin{equation}
+I_A = 4\cdot \frac{2}{5}m(a/2)^2 + m(2\sqrt{2}a)^2 + 2\cdot m(2a)^2 = \frac{82}{5} ma^2
+\end{equation} und laut Steiner müssten wir erhalten
+\begin{equation}
+I_A = I_{s1} + 4m\cdot (\sqrt{2})^2 = \left(\frac{42}{5} + 8\right)ma^2 = \frac{82}{5}ma^2
+\end{equation}
+Die selbe Rechnung wiederholen wir nun für die Drehachsen, welche auf dem Blatt liegen,
+\begin{equation}
+I_{s2} = 4\cdot \left(\frac{2}{5}m(a/2)^2 + ma^2\right) = \frac{22}{5}ma^2
+\end{equation}
+\begin{equation}
+I_P = 4\frac{2}{5}m(a/2)^2 + 2\cdot m(2a)^2 = \frac{42}{5}ma^2
+\end{equation}
+und mit Steiner prüfen wir dies,
+\begin{equation}
+I_P = I_{s2} + 2\cdot ma^2 = \left(\frac{22}{5} + 4\right)ma^2 = \frac{42}{5}ma^2
+\end{equation}
+
+\loesung
+Zuerst bestimmen wir die Massen der beiden Scheiben. Hier müssen wir natürlich wieder mit dem Vorzeichen aufpassen. Wir sagen, die Masse des Lochs sei negativ.
+\begin{equation}
+m_{scheibe} + m_{loch} = m
+\end{equation}
+Das Verhältnis der Zwei Massen ist proportional zum Verhältnis der Radien im Quadrat, also $8:-1$.
+\begin{equation}
+-9\cdot m_{loch} + m_{loch} = m \Rightarrow m_{loch} = -\frac{1}{8}m
+\end{equation}
+\begin{equation}
+m_{scheibe} = \frac{9}{8}m
+\end{equation}
+Die Scheibe, wie sie dargestellt ist, wiegt $m$. Also hätte das Loch eine Masse von $-\frac{1}{8}m$ und die Scheibe ohne Loch eine Masse von $9/8m$. Um den Schwerpunkt zu berechnen, können wir nun diese Werte einsetzen, wobei wir in der Mitte der grossen Scheibe den Nullpunkt setzen.
+\begin{equation}
+x_s = \frac{\frac{9}{8}m\cdot 0 -\frac{1}{8}m\cdot r/2}{m} = \frac{1}{16}r.
+\end{equation}
+Das Trägheitsmoment einer Scheibe ist das Selbe, wie das einer Zylinders. Mit dem Satz von Steiner können wir diese ausrechnen und erhalten
+\begin{equation}
+I_c = \frac{1}{2}\frac{9}{8}mr^2 + \frac{1}{2}\frac{-1}{8}m(r/3)^2 + \frac{-1}{8}m(r/2)^2 = \left(\frac{9}{16}-\frac{1}{2\cdot 8 \cdot 9}-\frac{1}{8\cdot 2^2}\right) mr^2
+\end{equation}
+\begin{equation}
+= \frac{151}{288}mr^2
+\end{equation}
+%9/16 - 1/(2*8*9) - 1/32 = (162-2-9)/288 = 151/288
+
+\loesung
+\begin{equation}
+E_{tot} = E_{rot} + E_{kin}
+\end{equation}
+\begin{equation}
+mgh = \frac{1}{2}I_s\dot{\omega}^2 + \frac{1}{2}mv^2
+\end{equation}
+\begin{equation}
+v = r\dot{\omega}
+\end{equation}
+\begin{equation}
+mgh = \frac{1}{2}\frac{1}{2}Mv^2 + \frac{1}{2}mv^2
+\end{equation}
+\begin{equation}
+v = \sqrt{\frac{4mgh}{M+2m}}
+\end{equation}
+
+\loesung
+\begin{enumerate}[a)]
+\item
+\begin{equation}
+E_{tot} = E_{rot,s} + E_{kin} = \frac{1}{2}I_s\dot{\omega}^2 + \frac{1}{2}mv^2
+\end{equation}
+\begin{equation}
+v = r\cdot \dot{\omega}
+\end{equation}
+\begin{equation}
+E_{tot} = \frac{1}{2}\left(\frac{1}{2}mr^2+mr^2\right)\frac{v^2}{r^2} = mgh
+\end{equation}
+\begin{equation}
+v = \sqrt{\frac{4gh}{3}}
+\end{equation}
+Zum Vergleich: eine reibungsfrei gelagerte Kiste hat eine Geschwindigkeit von
+\begin{equation}
+v = \sqrt{2gh}.
+\end{equation}
+\item
+Mit dem Satz von Steiner berechnen wir das effektive Trägheitsmoment,
+\begin{equation}
+I_p = I_s + mr^2 = \frac{3}{2}mr^2
+\end{equation}
+\begin{equation}
+\frac{1}{2}I_p\dot{\omega}^2 = mgh
+\end{equation}
+\begin{equation}
+v = \sqrt{\frac{4gh}{3}}
+\end{equation}
+\end{enumerate}
+
+\loesung
+Wie wir in der vorhergehenden Aufgabe berechnet haben, ist die Geschwindigkeit grösser, je kleiner das Trägheitsmoment ist. Also gilt
+\begin{equation}
+t_{kugel} \leq t_{zylinder} \leq t_{hohlkugel} \leq t_{hohlzylinder}
+\end{equation}
+Die Reibungsfreie Kiste hat kein Trägheitsmoment, da sie sich nicht drehen wird. Folglich ist sie am schnellsten (wobei es merkwürdig ist, dass nur die Kiste keine Reibungskraft hat).
+
+\loesung
+\begin{equation}
+M = r\cdot F_g\cdot sin(\alpha) = 0.8m\cdot 82kg\cdot 10m/s^2\cdot sin(71^\circ) = 620N
+\end{equation}
+
+\loesung
+\begin{enumerate}[a)]
+\item 
+\begin{equation}
+v = \frac{s}{t} = \frac{2\pi\cdot 20m}{10s} = 12.6m/s
+\end{equation}
+\item 
+\begin{equation}
+\dot{\omega} = \frac{2\pi}{T} = \frac{2\pi}{10s} = 0.63rad/s
+\end{equation}
+\item
+\begin{equation}
+W = F\cdot s = F \cdot 2\pi r = 200N \cdot 2\pi \cdot 20m = 25.1kJ 
+\end{equation}
+\item 
+\begin{equation}
+M = F\cdot r = 200N\cdot 20m = 4kNm
+\end{equation}
+\item 
+\begin{equation}
+W = M\cdot \omega = W\cdot 2\pi = 4kNm \cdot 2\pi = 25.1kJ
+\end{equation}
+\item 
+\begin{equation}
+I_s = m\cdot r^2 = 1000kg\cdot (20m)^2 = 4\cdot 10^5kg\cdot m^2
+\end{equation}
+\item 
+\begin{equation}
+\ddot{\omega} = \frac{a}{r} = \frac{2m/s^2}{20m} = 0.1rad/s^2
+\end{equation}
+\item 
+\begin{equation}
+P = F\cdot v = (200N + 1000kg\cdot 2m/s^2)\cdot 12.6m/s = 27.7kW
+\end{equation}
+\item
+Achtung: Radius, nicht Durchmesser!
+\begin{equation}
+M = F\cdot r = 2200N\cdot 0.45cm/2 = 495Nm 
+\end{equation}
+\item
+\begin{equation}
+P(t) = F\cdot v(t) = 2200N\cdot (12.6m/s + 2m/s^2\cdot t) = 27.7kW + 4.4kW/s \cdot t
+\end{equation}
+\end{enumerate}
+
+
+\loesung
+\begin{enumerate}[a)]
+\item 
+\begin{equation}
+mgh = \frac{1}{2}I_s \dot{\omega}^2 + \frac{1}{2}mv^2
+\end{equation}
+\begin{equation}
+v = r\cdot \dot{\omega}
+\end{equation}
+\begin{equation}
+mgh = \frac{1}{2}\left(\frac{1}{2}mr^2\dot{\omega}^2 + mv^2\right)
+\end{equation}
+\begin{equation}
+v = \sqrt{\frac{4gh}{3}}
+\end{equation}
+\item
+$F_s$ ist die Seilkraft, sie wirkt entgegen der Gewichtskraft nach oben. Da nur diese zwei Kräfte wirken, muss sich das Yo-Yo nach unten beschleunigen, es gibt keine seitliche Bewegung!
+\begin{equation}
+F_{tot} = F_g-F_s = m\cdot a
+\end{equation}
+\begin{equation}
+M = F_s\cdot r = \ddot{\omega}\cdot I_s
+\end{equation}
+\begin{equation}
+a = r\cdot \ddot{\omega}
+\end{equation}
+Die ersten beiden Gleichungen lösen wir nach den Beschleunigungen auf und setzen sie in die dritte ein,
+\begin{equation}
+\frac{F_g-F_s}{m} = r\cdot \frac{M}{I_s} = r\cdot \frac{F_s\cdot r}{I_s}
+\end{equation}
+Nun lösen wir nach der Seilkraft auf. Zudem haben wir $I_s = \frac{1}{2}mr^2$.
+\begin{equation}
+\frac{F_g}{m} = \frac{F_s\cdot r^2}{I_s} + \frac{F_s}{m} = F_s\left(\frac{2}{m}+\frac{1}{m}\right) = \frac{3F_s}{m}
+\end{equation}
+Dies ergibt
+\begin{equation}
+F_s = \frac{F_g}{3} = \frac{mg}{3} 
+\end{equation}
+Also haben wir für die Beschleunigung
+\begin{equation}
+a = \frac{F_g-F_s}{m} = \frac{mg-mg/3}{m} = \frac{2}{3}g.
+\end{equation}
+Diese Rechnung ist wiederum deutlich einfacher. Unter der Voraussetzung, dass das Seil nicht reisst, kann man hier auch gleich diesen Ansatz wählen. Das Trägheitsmoment berechnen wir wiederum mit dem Satz von Steiner, $I_p = I_s + mr^2 = \frac{3}{2}mr^2$, das Drehmoment bezüglich dem Aufhängepunkt ist gegeben durch $M = r\cdot F_g$.
+\begin{equation}
+a = r\cdot \ddot{\omega} = r\cdot \frac{M}{I_p} = r\cdot \frac{rmg}{\frac{3}{2}mr^2} = \frac{2}{3}g
+\end{equation}
+\item Wir haben die Strecke und die Beschleunigung gegeben, die Geschwindigkeit ist folglich
+\begin{equation}
+v = \sqrt{2as} = \sqrt{2\frac{2}{3}gh} = \sqrt{\frac{4}{3}gh}
+\end{equation}
+\end{enumerate}
+
+\loesung
+\begin{enumerate}[a)]
+\item
+Da ein Ende des Stabes eingespannt ist, wählen wir diesen Punkt als Drehpunkt. Das einzige, was wir berechnen müssen, ist das Trägheitsmoment, sowie das Drehmoment bezüglich diesem Punkt. Ersteres finden wir in den Unterlagen, $I_p = \frac{1}{3}ml^2$, zweiteres ist gegeben durch die Gewichtskraft $F_g$, sowie dem Abstand des Schwerpunktes zum Drehpunkt, $l/2$.
+\begin{equation}
+\ddot{\omega} = \frac{M}{I_p} = \frac{mgl/2}{\frac{1}{3}ml^2} = \frac{3}{2}\frac{g}{l}
+\end{equation}
+Die Beschleunigung des entfernten Endes ist
+\begin{equation}
+a = l\cdot \ddot{\omega} = \frac{3}{2}g
+\end{equation}
+\item
+Die Beschleunigung um unteren Punkt ist gerade die Zentripetalbeschleunigung, $a_z = \dot{\omega}^2$.
+$\dot{\omega}$ berechnen wir anhand der Energieerhaltung,
+\begin{equation}
+E_{rot} = E_{pot}.
+\end{equation}
+Dabei haben wir
+\begin{equation}
+E_{rot} = \frac{1}{2}I\dot{\omega}^2 = \frac{1}{2}\cdot \frac{1}{3}ml^2\dot{\omega}^2
+\end{equation}
+\begin{equation}
+E_{pot} = gm\frac{l}{2}.
+\end{equation}
+Mit diesen Gleichungen kombiniert erhalten wir
+\begin{equation}
+\dot{\omega}^2 = \frac{3g}{l}
+\end{equation}
+Die Zentripetalbeschleunigung am tiefsten Punkt ist also
+\begin{equation}
+a_z = l\dot{\omega}^2 = 3g
+\end{equation}
+\end{enumerate}
+
+\loesung
+\begin{enumerate}[a)]
+\item Wenden wir die rechte Hand Regel an. Der Radius entspricht gerade $L_1$, bzw. $L_2$, wobei man vom Punkt p her zeigen muss. Dies ist die Richtung vom gestreckten Zeigefinger. Nun dreht man die Hand, bis der nach innen abgewinkelte Mittelfinger in die Richtung der Kraft zeigt. Wenn man flach zieht, so zeigt das Drehmoment (der Daumen) aus dem Blatt heraus, die Spule beschleunigt sich also im Uhrzeigersinn und bewegt sich nach rechts. Wenn man steil zieht, kehrt sich das Drehmoment um und zeigt in das Blatt hinein. Zeigt die Kraft genau auf den Punkt p, so bewegt sich die Rolle nicht (sofern man nicht zu stark zieht).
+
+\item
+Wenn wir wieder die Bewegung bezüglich dem Punkt $p$ betrachten, wird die Aufgabe wiederum deutlich einfacher, da wir die Reibungskraft nicht berechnen müssen,
+\begin{equation}
+\ddot{\omega} = \frac{M}{I_p} = \frac{F\cdot L}{I_p} = \frac{F\cdot (r-Rcos(\beta))}{I_s + mR^2}
+\end{equation}
+\begin{equation}
+= 0.3N\frac{2.5cm-5cm\cdot cos(76^\circ)}{\frac{1}{2}(0.02kg\cdot (2.5cm)^2 + 2\cdot 0.07kg \cdot (5cm)^2) + (0.16kg\cdot (5cm)^2)} = 0.067rad/s^2
+\end{equation}
+\begin{equation}
+\ddot{\omega_2} = 0.3N\frac{2.5cm-5cm\cdot cos(23^\circ)}{\frac{1}{2}(0.02kg\cdot (2.5cm)^2 + 2\cdot 0.07kg \cdot (5cm)^2) + (0.16kg\cdot (5cm)^2)} = -0.11rad/s^2
+\end{equation}
+\item
+%Lösung noch nicht korrekt, ein - ist noch nicht richtig... zudem dachte ich, dass die Lösung einfacher sei...
+Wir stellen wieder die Beschleunigungsgleichungen in der Horizontalen auf und lösen sie nach $F_R$ auf. Die Reibung zeigt entgegen der äusseren Kraft, ebenso zeigt das Drehmoment der Reibung entgegen des äusseren Drehmomentes. Die Winkelbeschleunigung zeigt entgegen der effektiven Beschleunigung, deshalb haben die Drehmomente dort jeweils das entgegengesetzte Vorzeichen wie die Kräfte für die Beschleunigungen.
+\begin{equation}
+a = \frac{F\cdot cos(\beta)-F_R}{m}
+\end{equation}
+\begin{equation}
+\ddot{\omega} = \frac{F_R\cdot R-F\cdot r}{I_{tot,s}}
+\end{equation}
+Diese setzen wir nun in die Gleichung
+\begin{equation}
+a = R\cdot \ddot{\omega}
+\end{equation}
+ein und formen mehrmals um,
+\begin{equation}
+\frac{F\cdot cos(\beta)-F_R}{m} = R\cdot \frac{F_R\cdot R-F\cdot r}{I_{tot,s}}
+\end{equation}
+\begin{equation}
+F\cdot \left(\frac{cos(\beta)}{m}+\frac{rR}{I_s}\right) = F_R\cdot\left(\frac{1}{m} + \frac{R^2}{I_{tot,s}}\right) 
+\end{equation}
+\begin{equation}
+F\cdot (cos(\beta)I_s + rRm) = F_R \cdot (I_s + mR^2)
+\end{equation}
+\begin{equation}
+F_R = F\cdot \frac{cos(\beta)I_s + rRm}{I_s + mR^2}
+\end{equation}
+Dies setzen wir ein,
+\begin{equation}
+a = \frac{F\cdot cos(\beta)-F_R}{m} = F\cdot \frac{cos(\beta) - \frac{cos(\beta)I_s + rRm}{I_s + mR^2}}{m}
+\end{equation}
+\begin{equation}
+a = F\cdot \frac{cos(\beta)(I_s+mR^2) - (cos(\beta)I_s +rRm)}{m\cdot(I_s+mR^2)}
+\end{equation}
+\begin{equation}
+a = F\cdot R \cdot \frac{cos(\beta)mR-rm}{m\cdot(I_s+mR^2)}
+\end{equation}
+\begin{equation}
+a = F\cdot R \cdot \frac{R\cdot cos(\beta)-r}{I_s+mR^2} = -R\frac{F\cdot L}{I_p}
+\end{equation}
+\begin{equation}
+\ddot{\omega} = \frac{F\cdot L}{I_p}
+\end{equation}
+
+\iffalse
+Nun lösen wir nach der Reibungskraft auf
+\begin{equation}
+\frac{F\cdot cos(\beta)}{m} = F_R\cdot \left(\frac{R^2}{I_{tot,s}} + \frac{1}{m}\right) + \frac{F\cdot rR}{I_{tot,s}}
+\end{equation}
+\begin{equation}
+F_R = F\left(\cdot \frac{cos(\beta)}{\frac{mrR}{I_{tot,s}}+1} - \frac{rR}{I_{tot,s}}\right) = F\cdot cos(\beta)\left(\frac{I_{tot,s}}{mrR}+1\right)
+\end{equation}
+%fertig lösen!
+\fi
+
+\end{enumerate}
+
+%noch mit den Winkelfunktionen schön umrechen
+\loesung
+Der Drehimpuls beträgt bei $\alpha = 90^\circ$
+\begin{equation}
+L = r_0\cdot p\cdot cos(\alpha) = 0.7m\cdot 81kg\cdot \frac{29}{3.6}m/s = 456kgm^2/s
+\end{equation}
+Bei einem Abstand von $10m$ haben wir
+\begin{equation}
+L = r_0\cdot p\cdot cos(\alpha) = r\cdot p\cdot \frac{r_0}{r}
+\end{equation}
+gibt das selbe Resultat wie wir bereits ausgerechnet haben.
+
+Wir können den Drehimpuls auch via dem Winkel ausrechnen. Ob wir das $180^\circ -$ hineinrechnen ist dabei nicht weiter von Bedeutung, da der sinus den selben Wert haben wird. Wenn wir den Winkel mit dem sinus ausrechnen, einsetzen und kürzen, erhalten wir genau das selbe Resultat wie oben.
+\begin{equation}
+\alpha = 180^\circ - \arcsin(0.7m/\sqrt{(10m)^2+(0.7m)^2}) = 176^\circ
+\end{equation}
+So erhalten wir
+\begin{equation}
+L = \sqrt{(10m)^2+(0.7m)^2}\cdot mv\cdot sin(\alpha) 
+\end{equation}
+\begin{equation}
+= \sqrt{(10m)^2+(0.7m)^2}\cdot mv\cdot \frac{0.7m}{\sqrt{(10m)^2+(0.7m)^2}} = mv\cdot r_0
+\end{equation}
+
+
+%schreiben, warum der Drehimpuls erhalten, bzw. das Drehmoment 0 ist.
+\loesung
+Die Aufgabe ist im Thema Drehimpulserhaltung, das Thema also gegeben. Es ist aber noch nicht klar, weshalb. Schliesslich wirkt auf den Kometen die Gravitationskraft der Sonne. Dies erzeugt aber kein Drehmoment, da der Radius in die selbe (bzw. entgegengesetzte) Richtung zeigt, und das Kreuzprodukt $\vec{M} = \vec{r}\times \vec{F}$ deshalb 0 ist.
+
+Hier muss man hauptsächlich aufpassen, dass man die Grössen nicht verwechselt. Wie man die verschiedenen Radien und Geschwindigkeiten nennt ist egal, es muss einfach klar sein, welche gemeint ist.
+\begin{equation}
+L_1 = L_2
+\end{equation}
+\begin{equation}
+p_1r_1 = p_2r_2 \Rightarrow v_1 = v_2\frac{r_2}{r_1} = 12km/s\frac{3}{2} = 18km/s
+\end{equation}
+
+\loesung
+Der Drehimpuls ist gegeben durch die Summe aus dem Drehimpuls des Rades plus dem Drehimpuls der Person. In der Summe muss diese Grösse erhalten bleiben.
+\begin{equation}
+L = I_{rad}\dot{\omega}_{rad1} + 0 = -I_{rad}\dot{\omega}_{rad1} + I_{pers}\dot{\omega}_{pers}
+\end{equation}
+Die Winkelgeschwindigkeiten sind gegeben durch
+\begin{equation}
+\dot{\omega}_{pers} = \frac{2\pi}{T}
+\end{equation}
+\begin{equation}
+\dot{\omega}_{rad} = 800min^{-1} = \frac{800}{60s} = \frac{800\cdot 2\pi}{60}\frac{rad}{s}
+\end{equation}
+Lösen wir also die erste Gleichung nach $L_{pers}$, bzw. $I_{pers}$ auf,
+\begin{equation}
+L_{pers} = 2\cdot L_{rad1}
+\end{equation}
+\begin{equation}
+I_{pers} = 2\cdot I_{rad}\cdot \frac{2\dot{\omega}_{rad}}{\dot{\omega}_{pers}} = 2\cdot 0.1kgm^2\frac{\frac{800\cdot 2\pi}{60}rad/s}{\frac{2\pi rad}{2s}} = 2\cdot 0.1kgm^2\frac{2\cdot 800}{60} = 5.33kgm^2
+\end{equation}
+
+\loesung
+\begin{enumerate}[a)]
+\item 
+\begin{equation}
+L = I_1 \cdot \dot{\omega}_1 = I_2 \cdot \dot{\omega}_2
+\end{equation}
+\begin{equation}
+\dot{\omega}_1 = \frac{2\pi}{T_1} 
+\end{equation}
+\begin{equation}
+f_2 = \frac{\dot{\omega}_2}{2\pi}
+\end{equation}
+Diese Gleichungen setzen wir alle zusammen:
+\begin{equation}
+f_2 = \frac{\dot{\omega}_2}{2\pi} = \dot{\omega}_1\frac{I_1}{I_2\cdot 2\pi} = \frac{2\pi}{T_1} \frac{I_1}{I_2\cdot 2\pi} = \frac{1}{T_1}\frac{I_1}{I_2}
+\end{equation}
+\begin{equation}
+ = \frac{1}{2s}\frac{3kgm^2 + 2\cdot (1m)^2\cdot 5kg}{2.2kgm^2 + 2\cdot (0.2m)^2\cdot 5kg} = 2.5s^{-1}
+\end{equation}
+\item 
+\begin{equation}
+E_{rot1} = \frac{1}{2}I_1\dot{\omega_1}^2 = \frac{1}{2}\cdot (3kgm^2 + 2\cdot (1m)^2\cdot 5kg)\cdot \left(\frac{2\pi}{2s}\right)^2 =  64J
+\end{equation}
+\begin{equation}
+E_{rot2} = \frac{1}{2}I_2\dot{\omega_2}^2 = \frac{1}{2}\cdot (2.2kgm^2 + 2\cdot (0.2m)^2\cdot 5kg)\cdot \left(2.5rad/s\right)^2 =  320J
+\end{equation}
+Die Arme verrichten Arbeit an den Gewichten.
+\end{enumerate}
+
+\loesung
+Das Trägheitsmoment der Scheiben ist $I_A = \frac{1}{2}m_Ar^2 = 0.01kgm^2$, $I_B = 0.005kgm^2$. Die Formel ist die selbe, wie für den inelastischen Stoss und es geht kinetische Energie verloren.
+\begin{equation}
+I_A\dot{\omega}_{A1} + I_B\dot{\omega}_{B1} = I_A\dot{\omega}_2 + I_B\dot{\omega}_2
+\end{equation}
+\begin{equation}
+\dot{\omega}_2 = \frac{I_A\dot{\omega}_{A1} + I_B\dot{\omega}_{B1}}{I_A + I_B} = \frac{0.01kgm^2\cdot 50rad/s + 0.005kgm^2\cdot 200rad/s}{0.015kgm^2} = 100rad/s
+\end{equation}
+\begin{equation}
+E_{rotA1} = \frac{1}{2}I_A\cdot \dot{\omega_A1}^2 = \frac{1}{2}\frac{1}{2}\cdot 2kg\cdot (0.1)m^2\cdot (50rad/s)^2 = 12.5J
+\end{equation}
+\begin{equation}
+E_{rotB1} = \frac{1}{2}I_B\cdot \dot{\omega_B1}^2 = \frac{1}{2}\frac{1}{2}\cdot 4kg\cdot (0.05)m^2\cdot (200rad/s)^2 = 100J
+\end{equation}
+\begin{equation}
+E_2 = \frac{1}{2}I_{tot}\dot{\omega_2}^2 = \frac{1}{2}\left(\frac{1}{2}\cdot 4kg\cdot (0.05)m^2 + \frac{1}{2}\cdot 2kg\cdot (0.1m)^2\right)\cdot (100rad/s)^2 = 75J
+\end{equation}
+Es gingen $100J+12.5J-75J = 37.5J$ als Reibung verloren.
+
+\loesung
+\begin{equation}
+L_1 = r\cdot p = 0.5m\cdot 0.01kg\cdot 400m/s
+\end{equation}
+\begin{equation}
+L_2 = I_p\cdot \dot{\omega}
+\end{equation}
+\begin{equation}
+\dot{\omega} = \frac{L_1}{I_p} = \frac{0.5m\cdot 0.01kg\cdot 400m/s}{\frac{1}{3}15kg\cdot (1m)^2} = 0.4rad/s
+\end{equation}
+\end{document}
