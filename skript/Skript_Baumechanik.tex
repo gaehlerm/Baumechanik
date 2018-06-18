@@ -86,11 +86,11 @@ Buchempfehlungen:\\
 Der zeitliche Ablauf der Vorlesung ist ungefähr wie folgt:
 \begin{table}[h]
 \begin{tabular}{ l l }
-Tag 1: & Einführung und Kinematik\\
+Tag 1: & Einführung, Einheiten und Kinematik\\ %dafür sollte mehr Zeit investiert werden. Wer das nicht kann, der versteht auch die Drehbewegungen nicht.
 Tag 2: & Kräfte\\
-Tag 3: & Kräfte\\
+Tag 3: & Kräfte\\ % Hier wurde mal noch der Impuls eingeführt. Ob das sinnvoll ist, weiss ich nicht. Evtl. sollte man ihn weglassen. Der Raketenantrieb war sicher zu viel des guten.
 Tag 4: & Energie\\
-Tag 5: & Energie\\
+Tag 5: & Energie\\ %Leistung könnte man auch weglassen.
 Tag 6: & Drehmoment\\
 Tag 7: & Trägheitsmoment\\
 Tag 8: & Trägheitsmoment\\
@@ -105,6 +105,38 @@ In der Physik geht es darum, die Umwelt möglichst exakt zu beschreiben. Sie wir
 
 Um die Natur zu beschreiben, brauchen wir nicht nur reine Zahlen, sondern auch noch Einheiten. Dazu wurden vor gut 200 Jahren verschiedene Grössen definiert. Die Wichtigsten davon sind die sogenannten SI-Grundeinheiten Meter, Sekunde und Kilogramm (nicht Gramm!!). Anhand von diesen 3 Einheiten werden wir alle weiteren Einheiten in dieser Vorlesung ableiten können. Auch bei den Einheiten gilt, was bereits im ersten Absatz geschrieben wurde: Meistens wissen Sie, welche Einheiten das Schlussresultat haben sollte, aber es ist natürlich besser, wenn man es genau ausrechnet. Dies möchten wir nun kurz mit ein paar einfachen Beispielen verdeutlichen.
 
+%Das hier ist die neue Version
+Zuerst eine kleine Widerholung der Mathematik. Formen Sie folgende Gleichungen um: %sollten evtl. noch weitere Beispiele hinzugefügt werden.
+\begin{equation}
+x = y \cdot z \rightarrow y = \dots
+\end{equation}
+\begin{equation}
+2 \cdot a^2/b = 8 \rightarrow b = \dots
+\end{equation}
+Wir können natürlich auch mehrere Gleichungen kombinieren. a(c) bedeutet, dass a nur noch von c abhängen soll, sie sollen also b loswerden. %auch hier sollten vermutlich ein paar weitere einfache Aufgaben hinzugefügt werden
+\begin{equation}
+3\cdot a/b = c, b = a^2 \rightarrow a(c) = \dots
+\end{equation}
+\begin{equation}
+10 \cdot y^2 \cdot z = x, y = 1000\cdot z, y(x) = \dots
+\end{equation}
+Soweit kennen Sie (hoffentlich) alles aus dem Mathematikunterricht. Wir können a, b, x, y etc. aber auch durch andere Ausdrücke ersetzen, z.B. Einheiten. 
+\begin{equation}
+1km = 1000m \rightarrow 0.4\cdot 1km = \dots
+\end{equation}
+\begin{equation}
+1us = 10^{-6}s, 1ms = 10^{-3}s \rightarrow 35 \cdot 1ms = \dots us
+\end{equation}
+\begin{equation}
+1Jahr = \dots Tage = \dots Stunden = \dots Minuten = \dots Sekunden
+\end{equation}
+\begin{equation}
+1um = 10^{-6}s, \frac{2\cdot 1um}{1s} = \frac{\dots m}{Jahr}
+\end{equation}
+
+Wenn wir Einheiten benutzen, rechnen wir damit also genau gleich, wie wenn wir in der Mathematik eine Unbekannte haben.  %noch ein paar Begründungen dazu, wie wir mit Einheiten rechnen. Und ein paar Anmerkungen zu den Einheitenvorsätzen.
+
+\iffalse %Alte Version, welche ich abändern würde
 \begin{enumerate}
 \item $5h = \dots s$
 \item Zwetschgen kosten $5.-/kg$. Eine Zwetschge wiegt $100g$. Wie viel kostet eine Zwetschge?
@@ -147,7 +179,9 @@ Zuletzt noch
 
 Man kann auch anhand der Einheiten raten, wie man die verschiedenen Grössen kombinieren muss, um das gewünschte Resultat erhalten. Beim letzten Beispiel suchen wir etwas mit den Einheiten $\frac{Fr.-}{Stueck}$ und haben Grössen mit den Einheiten $\frac{Fr.-}{kg}$, sowie $\frac{kg}{Stueck}$ gegeben. Entsprechend kann man auch einfach raten und die beiden Grössen miteinander multiplizieren, da $\frac{Fr.-}{Stueck} = \frac{Fr.-}{kg}\frac{kg}{Stueck}$ gilt. Ob man dabei einen Faktor $\pi$ falsch liegt, weiss man nicht, aber zumindest hat man gut geraten.
 
-Versuchen Sie bei möglichst allen Aufgaben in dieser Vorlesung mit den Einheiten zu rechnen, und nicht nur die Zahlen hinzuschreiben. Dies ist eine gute Übung, und sie können so teilweise auch Fehler frühzeitig erkennen, falls die erhaltene Einheit nicht mit dem gesuchten Resultat übereinstimmt.
+Versuchen Sie bei möglichst allen Aufgaben in dieser Vorlesung mit den Einheiten zu rechnen, und nicht nur die Zahlen hinzuschreiben. Dies ist eine gute Übung, und sie können so teilweise auch Fehler frühzeitig erkennen, falls die erhaltene Einheit nicht mit dem gesuchten Resultat übereinstimmt. 
+
+\fi
 
 \begin{table}[h]
 \centering
@@ -181,7 +215,8 @@ Formen sie die folgenden Grössen um:
 
 \chapter{Kinematik}
 \section{Geschwindigkeit}
-
+%Zuerst sollte man den Studenten evtl. die Aufgabe zum Stein geben, welcher man in den Brunnen wirft, um die Tiefe zu bestimmen. Wer diese Aufgabe lösen kann, darf gehen. Die Andern haben noch etwas zu tun.
+%Wie meistens: Die Unterlagen sollten nochmals etwas überarbeitet werden...
 Die Kinematik ist eine Grundlegende, und auch eine der einfachsten Theorien der Physik. Sie beschreibt die Bewegung von Körpern. Zuerst müssen wir dazu ein Koordinatensystem, sowie eine Zeit definieren. Wie wir das genau machen, ist uns überlassen. Am einfachsten wählen wir einfach mal bei Luzern den Ort $0km$ und starten eine Stoppuhr, wenn wir losfahren, $0:00:00$. Alle Distanzen und Zeiten werden von hier aus gemessen. Ein Auto fährt nun mit einer konstanten Geschwindigkeit von $100km/h$ in Richtung Zürich ($50km$ entfernt). Die ganze Fahrt dauert entsprechend $30min$. Wo befindet sich das Auto nach $12min$?
 %Grafik zum Auto einfügen
 \begin{figure}[h]
@@ -259,6 +294,8 @@ Wenn man den Anfangsort $s_0$ nicht bei 0 gewählt hat, muss man diesen natürli
 \begin{equation}
 s = s_0 + v_0\cdot t + \frac{1}{2}a\cdot t^2.
 \end{equation}
+
+%grafische Darstellung von Bewegungen?
 
 \section{Gravitationsbeschleunigung}
 Wenn Ihnen Ihr iPhone aus der Hand fällt, hat dieses zu Beginn des Falles noch keine Vertikalgeschwindigkeit. Am Boden ist es aber schon ziemlich schnell und wird entsprechend beschädigt. Es hat also in kurzer Zeit an Geschwindigkeit gewonnen. Die entsprechende Beschleunigung ist für alle Widerstandsfreien Körper (ohne Luftwiderstand) und überall auf unserem Planeten etwa gleich gross. Sie beträgt $g = 9.81m/s^2$ und wird Gravitationsbeschleunigung genannt. Für Körper im Freien Fall können wir auch mit den bereits behandelten Formeln rechnen, wobei wir nun natürlich Bewegungen in der Vertikalen betrachten und die Beschleunigung immer jeweils durch $a = g$ gegeben ist.
@@ -540,7 +577,6 @@ Es gibt natürlich auch Reibungskräfte, wenn sich ein Körper noch nicht bewegt
 	\label{fig:Schlitten_schnee}
 \end{figure}
 
-
 \section{Hookesche Gesetz}
 Das Hookesche Gesetz beschreibt die Verformung von Körpern, welche belastet werden. Es besagt, dass sich für kleine Kräfte eine Verformung auftritt, welche linear zur Kraft ist. Das offensichtlichste Beispiel sind Federn, da diese ja genau dafür ausgelegt sind, unter einer Kraft sich zu verformen. Die Kraft $F$, und die Verformung $\delta l$ sind durch folgende Formel gegeben:
 \begin{equation}
@@ -687,6 +723,7 @@ Hier sehen wir auch schon einen Nachteil des Winkelmasses Grad. Die $360^\circ$,
 s = r\cdot \omega
 \end{equation}
 
+%Die Herleitung hier kann man vermutlich auch streichen. Aber ich mag sie.
 Die Bewegung hängt nun ausschliesslich vom Winkel $\omega$ ab, da der Radius konstant ist. Die Geschwindigkeit lässt sich nun umschreiben zu
 \begin{equation}
 v = \frac{s}{t} = \frac{r\omega}{t} = r\frac{\omega}{t} = r\cdot \dot{\omega}.
@@ -861,7 +898,7 @@ W = \int F(s)\cos(\alpha) ds
 
 \aufgabe Wie viel Energie wird benötigt, um eine Feder mit $k = 2kN/m$ um $5cm$ zu dehnen? $\bigotimes 2.5J$
 
-%Aufgaben ohne Integral!!
+%Aufgaben ohne Integral!! Die meisten Studenten können noch nicht integrieren!!
 \aufgabe Von einer Stahlkette liegen $2 m$ auf einem Balkon, 1 m hängt vertikal von der Balkonkante. Die Kraft auf das hängende Teil ist gross genug, um die Kette über die Kante zu ziehen. Die Reibungskraft ist vernachlässigbar klein, wenn die Kette einmal in Bewegung ist. Die Kette habe ein Längengewicht von $\lambda = 2kg/m$. 
 Berechnen Sie die Arbeit, die die Gravitationskraft an der Kette verrichtet, wenn das letzte Glied die Balkonkante gerade verlassen hat. 
 \begin{enumerate}[a)]
@@ -1059,7 +1096,7 @@ Die zweite Gleichung formen wir mit $a^2 - b^2 = (a+b)\cdot (a-b)$ noch einmal u
 %aufgaben zu explodierenden Systemen (inelastische Stösse in der Zeit umgekehrt)
 \vspace{3cm}
 
-\section{Raketenantrieb}
+\section{Raketenantrieb} %weglassen!! So viel Zeit haben wir nicht, und die Studenten sollten lieber die Grundlagen lernen.
 \begin{wrapfigure}{r}{5.5cm}
 	%\label{wrap-fig:1}
 	\includegraphics[width=5.5cm]{rakete}
@@ -1138,6 +1175,7 @@ Wenn man mit einer konstanten Geschwindigkeit einen Berg hochfährt, kommt es be
 %Aufgabe konstante Beschleunigung und ausrechnen, wie die Geschwindigkeit bei konstanter Leistung zunimmt
 
 \chapter{Drehbewegungen}
+%Ich habe hier die Reihenfolge von den andern Physikvorlesungen genommen. Vielleicht sollte man diese etwas umstellen.
 %zuerst den Schwerpunkt erklären?
 Bisher haben wir nur die Bewegung von punktförmigen Körpern betrachtet. Wo am einem Körper eine Kraft genau angreift, war uns bisher egal. Wenn man auf einem Fahrrad sitzt, macht es aber sehr wohl einen Unterschied, ob man mit der Vorder- oder Hinterradbremse bremst. Mit der Vorderradbremse hat man normalerweise zwar einen deutlich kürzeren Bremsweg, allerdings kann es einem dabei auch nach vorne überschlagen. Offensichtlich kommt es in diesem Fall sehr wohl darauf an, wo die Kraft genau angreift.
 %oder den Schwerpunkt erst hier erklären? Oder noch später?
@@ -1237,6 +1275,7 @@ Interessant wird es nun, wenn wir schauen, was wir bei Bewegungen bisher genau b
 
 %aufgaben zu umlaufzeit etc.?
 \section{Kreisbewegungen}
+%vielleicht sollte man hier zuerst die Aufgabe mit dem Auto stellen, welches im Kreis fährt. Zuerst rechnet man die Bewegung mit v,s etc., danach kann man die Rechnung auch nocht für omega etc. wiederholen.
 Beim Thema der Zentripetalkraft haben wir bereits die wichtigsten Grössen der Kreisbewegung gesehen: den Winkel $\omega$, sowie die Winkelgeschwindigkeit $\dot{\omega}$. Nun möchten wir noch ein paar weitere Grössen einführen. Eine einfach zu verstehende Einheit ist die Umlaufzeit $T$. Sie beschreibt, wie lange die Drehbewegung für eine Umdrehung braucht. Der während einer Sekunde zurückgelegte Winkel ist 
 \begin{equation}
 \dot{\omega} = 2\pi \frac{1}{T}.
